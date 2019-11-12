@@ -13,7 +13,7 @@ $str = 'london is the capital of great britain';
 $str_p = explode(' ', $str);
 $new_str = [];
 foreach ($str_p as $str_1){
-    $new_str = ucfirst($str_1);
+    $new_str[] = ucfirst($str_1);
     }
 $str = implode (' ', $new_str);
 var_dump($str);
