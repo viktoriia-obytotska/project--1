@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="cart.php" method="post">
+    <p><img src="img/pic1.jpg" alt="" width="170" height="180"/></p>
+    <p><a href="#">iPhone 11 Pro</a> 1500$ <span>20</span></p>
+    <input type="hidden" name="product" value="phone1">
+    <input type="number" name="count">
+    <input type="submit" value="add to cart">
+</form>
+<form action="cart.php" method="post">
+    <p><img src="img/pic2.jpg" alt="" width="170" height="180"/></p>
+    <p><a href="#">iPhone XS</a> 900$ <span>15</span></p>
+    <input type="hidden" name="product" value="phone2">
+    <input type="number" name="count">
+    <input type="submit" value="add to cart">
+</form>
+<form action="cart.php" method="post">
+    <p><img src="img/pic3.jpg" alt="" width="150" height="200"/></p>
+    <p><a href="#">iPhone XR</a> 700$ <span>28</span></p>
+    <input type="hidden" name="product" value="phone3">
+    <input type="number" name="count">
+    <input type="submit" value="add to cart">
+</form>
+<form action="cart.php" method="post">
+    <p><img src="img/cart.png" alt="" width="80" height="80"/></p>
+    <input type="hidden" name="cart"
+        <?php if (!empty($_SESSION['phones'])) { ?>
+            <?php foreach ($_SESSION['phones'] as $phone) { ?>
+                <?php echo $phone; ?>
+            <?php }?>
+        <?php } else { ?>
+        <?php echo 'no product'; ?>
+        <?php }?>
+    >
+</form>
+</form>
+
+</body>
+</html>

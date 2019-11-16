@@ -1,5 +1,4 @@
 <?php
-
-echo "hello";
-echo "123";
-
+session_start();
+var_dump($_SESSION['phones']);
+require_once 'catalog.phtml';
